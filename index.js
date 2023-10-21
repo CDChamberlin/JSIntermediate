@@ -1,3 +1,5 @@
+// Question 1
+
 function ucFirstLetters(string){
     let m = string.split(' ')
     let uc = ''
@@ -8,3 +10,10 @@ function ucFirstLetters(string){
 }
 console.log(ucFirstLetters("los angles"))
 console.log(ucFirstLetters('the Quick brown fox jumped over the lazy dog'))
+
+//Question 2 
+function truncate(str, max){
+    if (str.length > max) return str.substring(0, max) +'...'
+    else return str
+}
+console.log(truncate('This text will be truncated if it is too long', 25))
