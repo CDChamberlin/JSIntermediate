@@ -44,5 +44,17 @@ function findMatchingAnimals(beginsWith) {
   }
   return match;
 }
+//console.log(findMatchingAnimals("S"));
 
-console.log(findMatchingAnimals("S"));
+// Question 4
+function camelCase1(cssProp) {
+  let m = cssProp.split("-");
+  let uc = m[0];
+  for (let i = 1; i < m.length; i++) {
+    uc += m[i][0].toUpperCase() + m[i].substring(1);
+  }
+  return uc;
+}
+console.log(camelCase1('margin-left')) // marginLeft
+console.log(camelCase1('background-image')) // backgroundImage
+console.log(camelCase1('display')) // display
