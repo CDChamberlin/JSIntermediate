@@ -44,4 +44,5 @@ function findMatchingAnimals(beginsWith) {
   }
   return match;
 }
+
 console.log(findMatchingAnimals("S"));
