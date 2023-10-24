@@ -55,13 +55,26 @@ function camelCase1(cssProp) {
   }
   return uc;
 }
-function camelCase2(cssProp){
+function camelCase2(cssProp) {
   let m = cssProp.split("-");
-let uc = m[0];
-  for(let i of m){
-    
+  let uc = "";
+  for (let i of m) {
+    if (uc === "")
+    uc += i
+  else
+  uc = uc + i[0].toUpperCase()+i.substring(1) 
+  //console.log(i.toUpperCase())
   }
+  return uc;
 }
-console.log(camelCase1('margin-left')) // marginLeft
-console.log(camelCase1('background-image')) // backgroundImage
-console.log(camelCase1('display')) // display
+function camelCase3(cssProp){
+  let m = cssProp.split("-")
+  uc = ""
+  for (let i of m){
+    uc === "" ? uc += i : uc = uc + i[0].toUpperCase()+i.substring(1)
+  }
+  return uc
+}
+console.log(camelCase2("margin-left")); // marginLeft
+console.log(camelCase3("background-image")); // backgroundImage
+console.log(camelCase1("display")); // display
