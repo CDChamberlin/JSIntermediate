@@ -55,6 +55,13 @@ function camelCase1(cssProp) {
   }
   return uc;
 }
+function camelCase2(cssProp){
+  let m = cssProp.split("-");
+let uc = m[0];
+  for(let i of m){
+    
+  }
+}
 console.log(camelCase1('margin-left')) // marginLeft
 console.log(camelCase1('background-image')) // backgroundImage
 console.log(camelCase1('display')) // display
