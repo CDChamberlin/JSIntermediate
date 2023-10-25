@@ -45,6 +45,8 @@ function findMatchingAnimals(beginsWith) {
   return match;
 }
 
+console.log(findMatchingAnimals("S"));
+
 //console.log(findMatchingAnimals("S"));
 
 // Question 4
@@ -95,7 +97,7 @@ function currencyAddition(float1, float2){
   return (float1 + float2).toFixed(2)
 }
 function currencyOpperation(float1, float2, operation, numDecimals){
-  
+
   switch(operation){
     case '+': return (float1 + float2).toFixed(numDecimals)
     break;
