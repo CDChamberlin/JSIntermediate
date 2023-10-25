@@ -44,6 +44,7 @@ function findMatchingAnimals(beginsWith) {
   }
   return match;
 }
+
 //console.log(findMatchingAnimals("S"));
 
 // Question 4
@@ -78,3 +79,4 @@ function camelCase3(cssProp){
 console.log(camelCase2("margin-left")); // marginLeft
 console.log(camelCase3("background-image")); // backgroundImage
 console.log(camelCase1("display")); // display
+
