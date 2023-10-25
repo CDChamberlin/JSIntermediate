@@ -44,6 +44,7 @@ function findMatchingAnimals(beginsWith) {
   }
   return match;
 }
+
 //console.log(findMatchingAnimals("S"));
 
 // Question 4
@@ -108,5 +109,4 @@ function currencyOpperation(float1, float2, operation, numDecimals){
       throw new Error(console.log("Not one of the four basic math functions, '+', '-', '*', or '/'.")) 
   }
 }
-console.log(currencyAddition(twentyCents, tenCents))
-console.log(currencyOpperation(twentyCents, tenCents, "+", 13))
+
