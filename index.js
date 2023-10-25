@@ -45,4 +45,38 @@ function findMatchingAnimals(beginsWith) {
   return match;
 }
 
-console.log(findMatchingAnimals("S"));
+//console.log(findMatchingAnimals("S"));
+
+// Question 4
+function camelCase1(cssProp) {
+  let m = cssProp.split("-");
+  let uc = m[0];
+  for (let i = 1; i < m.length; i++) {
+    uc += m[i][0].toUpperCase() + m[i].substring(1);
+  }
+  return uc;
+}
+function camelCase2(cssProp) {
+  let m = cssProp.split("-");
+  let uc = "";
+  for (let i of m) {
+    if (uc === "")
+    uc += i
+  else
+  uc = uc + i[0].toUpperCase()+i.substring(1) 
+  //console.log(i.toUpperCase())
+  }
+  return uc;
+}
+function camelCase3(cssProp){
+  let m = cssProp.split("-")
+  uc = ""
+  for (let i of m){
+    uc === "" ? uc += i : uc = uc + i[0].toUpperCase()+i.substring(1)
+  }
+  return uc
+}
+console.log(camelCase2("margin-left")); // marginLeft
+console.log(camelCase3("background-image")); // backgroundImage
+console.log(camelCase1("display")); // display
+
