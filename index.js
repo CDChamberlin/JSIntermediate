@@ -167,3 +167,5 @@ function getTitles(authorInitials){
   ).map(book => book.title)
 }
 console.log(getTitles('F'))
+
+//Question 8
