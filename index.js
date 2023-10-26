@@ -45,9 +45,8 @@ function findMatchingAnimals(beginsWith) {
   return match;
 }
 
-console.log(findMatchingAnimals("S"));
-
 //console.log(findMatchingAnimals("S"));
+
 
 // Question 4
 function camelCase1(cssProp) {
@@ -83,18 +82,18 @@ function camelCase3(cssProp) {
 // Question 5
 let twentyCents = Math.random()
 let tenCents = Math.random()
-console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`)
+//console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`)
 // 0.2 + 0.1 = 0.30000000000000004
 
 let fixedTwenty = twentyCents.toFixed(2);
 let fixedTen = tenCents.toFixed(2);
-console.log(fixedTwenty + fixedTen) //why is this not working?
+//console.log(fixedTwenty + fixedTen) //why is this not working?
 /*
 a. the method toFixed returns a string representation of the number, and string adition concatinates the strings. 
 */
 // b: Creating a Function
 function currencyAddition(float1, float2){
-  return (float1 + float2).toFixed(2)
+  return Number((float1 + float2).toFixed(2))
 }
 function currencyOpperation(float1, float2, operation, numDecimals){
 
@@ -112,13 +111,13 @@ function currencyOpperation(float1, float2, operation, numDecimals){
   }
 }
 
-console.log(currencyOpperation(twentyCents, tenCents, "+"))
+//console.log(currencyOpperation(twentyCents, tenCents, "+"))
 
 // Question 6
 const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
 const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
-console.log(unique(colors)) // [ 'red', 'green', 'blue', 'yellow', 'orange' ]
-console.log(unique(testScores)) // [ 55, 84, 97, 63, 32, 91, 43 ]
+//console.log(unique(colors)) // [ 'red', 'green', 'blue', 'yellow', 'orange' ]
+//console.log(unique(testScores)) // [ 55, 84, 97, 63, 32, 91, 43 ]
 
 function unique(givenArray){
   //givenArray = givenArray.sort();
@@ -130,3 +129,41 @@ function unique(givenArray){
   }
   return a;
 }
+
+//Question 7
+const books = [
+  { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+  { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+  { id: 3, title: '1984', author: 'George Orwell', year: 1949 },
+  { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+  { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 },
+  {id: 6, title: "Random Title", author: 'Frank', year: 2023}
+  ];
+
+  function getBookTitle(bookId){
+    console.log(bookId)
+    return books.find(({id}) => id == bookId).title
+  }
+  //console.log(getBookTitle(4))
+
+  function getOldBooks(){
+    return books.filter(({year}) => year < 1950)
+  }
+
+  //console.log(getOldBooks())
+// Nonworking part c
+   function addGenre(){
+    return books.map( book => ({...book, genre: 'Classic'}))
+  }
+// const genre = addGenre()
+//console.log(addGenre())
+
+
+function getTitles(authorInitials){
+  //books.filter((books.map(({author} author.substring(0, authorInitials.length).toLowerCase() ===
+  // authorInitials.toLowerCase() ? true:))))
+  return books.filter(({author}) => 
+  author.substring(0, authorInitials.length).toLowerCase() === authorInitials.toLowerCase()
+  ).map(book => book.title)
+}
+console.log(getTitles('F'))
