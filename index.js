@@ -160,12 +160,28 @@ const books = [
 
 
 function getTitles(authorInitials){
-  //books.filter((books.map(({author} author.substring(0, authorInitials.length).toLowerCase() ===
-  // authorInitials.toLowerCase() ? true:))))
   return books.filter(({author}) => 
   author.substring(0, authorInitials.length).toLowerCase() === authorInitials.toLowerCase()
   ).map(book => book.title)
 }
-console.log(getTitles('F'))
+// console.log(getTitles('F'))
 
 //Question 8
+const phoneBookABC = new Map() //an empty map to begin with
+phoneBookABC.set('Annabelle', '0412312343') 
+phoneBookABC.set('Barry', '0433221117')
+phoneBookABC.set('Caroline', '0455221182')
+
+const phoneBookDEF = new Map()
+phoneBookDEF.set('Daniel', '6365553226')
+phoneBookDEF.set('Edward', '5552386')
+phoneBookDEF.set('Frankie', '5550123')
+
+phoneBookABC.set('Caroline', '0455221128')
+
+function printPhoneBook(contacts){
+  contacts.forEach((value, key) => console.log(`${key}: ${value}`))
+}
+// printPhoneBook(phoneBookABC)
+phoneBook = new Map([...phoneBookABC, ...phoneBookDEF])
+printPhoneBook(phoneBook)
