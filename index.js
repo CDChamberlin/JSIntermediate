@@ -185,3 +185,12 @@ function printPhoneBook(contacts){
 // printPhoneBook(phoneBookABC)
 phoneBook = new Map([...phoneBookABC, ...phoneBookDEF])
 printPhoneBook(phoneBook)
+
+// Question 9
+let salaries = {
+  "Timothy" : 35000,
+  "David" : 25000,
+  "Mary" : 55000,
+  "Christina" : 75000,
+  "James" : 43000
+  };
