@@ -202,6 +202,16 @@ let salaries = {
     return sum;
 
   }
-  console.log(sumSalaries(salaries))
+  // console.log(sumSalaries(salaries))
 
-  
+ function topEarner(salaries){
+    let top = 0;
+    let earner = "";
+    for (amnt in salaries)
+      if (top < salaries[amnt]){
+        top = salaries[amnt]
+        earner = amnt
+      } 
+    return earner
+ } 
+ console.log(topEarner(salaries))
