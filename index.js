@@ -184,7 +184,7 @@ function printPhoneBook(contacts){
 }
 // printPhoneBook(phoneBookABC)
 phoneBook = new Map([...phoneBookABC, ...phoneBookDEF])
-printPhoneBook(phoneBook)
+// printPhoneBook(phoneBook)
 
 // Question 9
 let salaries = {
@@ -194,3 +194,14 @@ let salaries = {
   "Christina" : 75000,
   "James" : 43000
   };
+
+  function sumSalaries(salaries){
+    let sum = 0
+    let amounts = Object.values(salaries)
+    amounts.forEach((m) => {sum += m});
+    return sum;
+
+  }
+  console.log(sumSalaries(salaries))
+
+  
