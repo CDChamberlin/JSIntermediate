@@ -184,4 +184,34 @@ function printPhoneBook(contacts){
 }
 // printPhoneBook(phoneBookABC)
 phoneBook = new Map([...phoneBookABC, ...phoneBookDEF])
-printPhoneBook(phoneBook)
+// printPhoneBook(phoneBook)
+
+// Question 9
+let salaries = {
+  "Timothy" : 35000,
+  "David" : 25000,
+  "Mary" : 55000,
+  "Christina" : 75000,
+  "James" : 43000
+  };
+
+  function sumSalaries(salaries){
+    let sum = 0
+    let amounts = Object.values(salaries)
+    amounts.forEach((m) => {sum += m});
+    return sum;
+
+  }
+  // console.log(sumSalaries(salaries))
+
+ function topEarner(salaries){
+    let top = 0;
+    let earner = "";
+    for (amnt in salaries)
+      if (top < salaries[amnt]){
+        top = salaries[amnt]
+        earner = amnt
+      } 
+    return earner
+ } 
+ console.log(topEarner(salaries))
