@@ -215,3 +215,23 @@ let salaries = {
     return earner
  } 
  console.log(topEarner(salaries))
+
+ // Question 10
+ const today = new Date();
+console.log('Current time is ' + today.toLocaleTimeString())
+
+console.log(today.getHours() + ' hours have passed so far today')
+console.log(today.getHours()*60 + today.getMinutes() + ' minutes have passed so far today')
+console.log((today.getHours()*60 + today.getMinutes())*60 + today.getSeconds() + ' seconds have passed so far today')
+const bday = new Date('May 14, 1997')
+
+console.log(`I am ${today.getFullYear() - bday.getFullYear()} years, ${bday.getMonth()} months, ${bday.getDate()} days old`)
+
+
+function daysInBetween(date1, date2){
+  console.log(`First date ${date1}. Second date ${date2}`)
+  
+  return (Math.abs(Math.round((date1.getTime() - date2.getTime()) / 8.64e7 )))
+}
+
+console.log(daysInBetween( today, bday))
