@@ -112,3 +112,21 @@ function currencyOpperation(float1, float2, operation, numDecimals){
   }
 }
 
+console.log(currencyOpperation(twentyCents, tenCents, "+"))
+
+// Question 6
+const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
+const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+console.log(unique(colors)) // [ 'red', 'green', 'blue', 'yellow', 'orange' ]
+console.log(unique(testScores)) // [ 55, 84, 97, 63, 32, 91, 43 ]
+
+function unique(givenArray){
+  //givenArray = givenArray.sort();
+  a = [];
+  for (i of givenArray){
+    if (!(a.includes(i))){
+      a.push(i)
+    }
+  }
+  return a;
+}
